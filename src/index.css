@@ -1,68 +1,55 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: "Outfit Variable", sans-serif;
+}
+.fontPlayfair {
+  font-family: "Playfair Variable", serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+/* 🎨 */
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --color-primary: #297add;
+    --color-primary-light: #3b82f6;
+    --color-primary-dark: #1e40af;
+    --color-bg-main: #ffffff;
+    --color-bg-card: #e3e6e8;
+    --color-bg-section: #f1f5f9;
+    --color-text-main: #0f172a;
+    --color-text-secondary: #475569;
+    --color-text-whitee: #f8fafc;
+    --color-border: #e2e8f0;
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+    
   }
-  a:hover {
-    color: #747bff;
+
+  .dark {
+    --color-primary: #60a5fa;
+    --color-primary-light: #93c5fd;
+    --color-primary-dark: #2563eb;
+    --color-bg-main: #0f172a;
+    --color-bg-card: #3d4f6b;
+    --color-bg-section: #051b38;
+    --color-text-main: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-text-whitee: #ffffff;
+    --color-border: #475569;
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
-  button {
-    background-color: #f9f9f9;
+   body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    transition: background-color 0.3s, color 0.3s;
   }
 }
+
+
+  h1, h2, h3, h4, h5, h6 {
+
+      font-family: "Playfair Variable", serif;
+  }
+/* 
+
+
