@@ -11,40 +11,40 @@
 /* 🎨 */
 @layer base {
   :root {
-    --color-primary: #297add;
+    --color-primary: #1e40af;
     --color-primary-light: #3b82f6;
-    --color-primary-dark: #1e40af;
+    --color-primary-dark: #1e3a8a;
     --color-bg-main: #ffffff;
-    --color-bg-card: #e3e6e8;
+    --color-bg-card: #f8fafc;
     --color-bg-section: #f1f5f9;
     --color-text-main: #0f172a;
     --color-text-secondary: #475569;
-    --color-text-whitee: #f8fafc;
+    --color-text-whitee: #ffffff;
     --color-border: #e2e8f0;
-    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
-    
+    --shadow-card: 0 4px 12px rgba(15, 23, 42, 0.08);
   }
 
   .dark {
     --color-primary: #60a5fa;
     --color-primary-light: #93c5fd;
-    --color-primary-dark: #2563eb;
-    --color-bg-main: #0f172a;
-    --color-bg-card: #3d4f6b;
-    --color-bg-section: #051b38;
-    --color-text-main: #f8fafc;
+    --color-primary-dark: #3b82f6;
+   --color-bg-main: #1a243f;
+  --color-bg-card: #243253;
+  --color-bg-section: #1f2b4a;
+
+    --color-text-main: #f1f5f9;
     --color-text-secondary: #cbd5e1;
     --color-text-whitee: #ffffff;
-    --color-border: #475569;
-    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --color-border: #334155;
+    --shadow-card: 0 4px 20px rgba(96, 165, 250, 0.12);
   }
-   body {
+  
+  body {
     background-color: var(--color-bg-main);
     color: var(--color-text-main);
     transition: background-color 0.3s, color 0.3s;
   }
 }
-
 
   h1, h2, h3, h4, h5, h6 {
 

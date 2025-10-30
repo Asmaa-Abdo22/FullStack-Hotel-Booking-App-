@@ -48,7 +48,7 @@ const Navbar = () => {
             ? isDark
               ? " bg-(--color-bg-main) shadow-lg py-4  text-(--color-primary)"
               : "bg-(--color-bg-main) shadow-md text-(--color-primary)  py-4 "
-            : "bg-transparent   py-4 "
+            : "bg-black  opacity-50   py-4 "
         }`}
       >
         {/* Logo */}
