@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HotelCard = ({ room, index }) => {
   return (
     <Link
-      to={room._id}
+      to={`rooms/${room._id}`}
       key={room._id}
       className="bg-(--color-bg-main) relative shadow-(--shadow-card) rounded-xl overflow-hidden "
       onClick={()=>{

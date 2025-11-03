@@ -5,76 +5,13 @@ import {
   StarIcon,
   WavesLadder,
 } from "lucide-react";
-import roomImg1 from "../../assets/roomImg1.png";
-import roomImg2 from "../../assets/roomImg2.png";
-import roomImg3 from "../../assets/roomImg3.png";
-import roomImg4 from "../../assets/roomImg4.png";
+
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import {  roomsDummyData } from "../../assets/assets";
 const Hotels = () => {
-  // Hotel Dummy Data
-  const hotelDummyData = {
-    _id: "67f76393197ac559e4089b72",
-    name: "Urbanza Suites",
-    address: "Main Road  123 Street , 23 Colony",
-    contact: "+0123456789",
-    owner: "userDummyData",
-    city: "New York",
-    createdAt: "2025-04-10T06:22:11.663Z",
-    updatedAt: "2025-04-10T06:22:11.663Z",
-    __v: 0,
-  };
-  // Rooms Dummy Data
-  const roomsDummyData = [
-    {
-      _id: "67f7647c197ac559e4089b96",
-      hotel: hotelDummyData,
-      roomType: "Double Bed",
-      pricePerNight: 399,
-      amenities: ["Room Service", "Mountain View", "Pool Access"],
-      images: [roomImg1, roomImg2, roomImg3, roomImg4],
-      isAvailable: true,
-      createdAt: "2025-04-10T06:26:04.013Z",
-      updatedAt: "2025-04-10T06:26:04.013Z",
-      __v: 0,
-    },
-    {
-      _id: "67f76452197ac559e4089b8e",
-      hotel: hotelDummyData,
-      roomType: "Double Bed",
-      pricePerNight: 299,
-      amenities: ["Room Service", "Mountain View", "Pool Access"],
-      images: [roomImg2, roomImg3, roomImg4, roomImg1],
-      isAvailable: true,
-      createdAt: "2025-04-10T06:25:22.593Z",
-      updatedAt: "2025-04-10T06:25:22.593Z",
-      __v: 0,
-    },
-    {
-      _id: "67f76406197ac559e4089b82",
-      hotel: hotelDummyData,
-      roomType: "Double Bed",
-      pricePerNight: 249,
-      amenities: ["Free WiFi", "Free Breakfast", "Room Service"],
-      images: [roomImg3, roomImg4, roomImg1, roomImg2],
-      isAvailable: true,
-      createdAt: "2025-04-10T06:24:06.285Z",
-      updatedAt: "2025-04-10T06:24:06.285Z",
-      __v: 0,
-    },
-    {
-      _id: "67f763d8197ac559e4089b7a",
-      hotel: hotelDummyData,
-      roomType: "Single Bed",
-      pricePerNight: 199,
-      amenities: ["Free WiFi", "Room Service", "Pool Access"],
-      images: [roomImg4, roomImg1, roomImg2, roomImg3],
-      isAvailable: true,
-      createdAt: "2025-04-10T06:23:20.252Z",
-      updatedAt: "2025-04-10T06:23:20.252Z",
-      __v: 0,
-    },
-  ];
+ 
+  
   const roomTypes = [
     { title: "Single Bed" },
     { title: "Double Bed" },
@@ -93,10 +30,10 @@ const Hotels = () => {
     { sort: "Newest First " },
   ];
   const navigate = useNavigate();
-  const [openFilters, setopenFilters] = useState(false);
+  const [openFilters, setopenFilters] = useState(true);
   return (
     <>
-      <div className=" mt-25 md:mt-35 px-8 mx-auto  md:px-32  mb-20">
+      <div className=" mt-25 md:mt-35 px-8 mx-auto md:px-20 lg:px-32 mb-20">
         <div className="title">
           <h1 className="font-extrabold mb-3 text-4xl text-(--color-text-main)">
             Hotel Rooms
@@ -159,7 +96,7 @@ const Hotels = () => {
                           size={17}
                           className="text-yellow-500"
                         />
-                        <span>200+ reviews</span>
+                        <span>200+ <span className="ms-1">reviews</span></span>
                       </div>
 
                       <div className="flex items-center gap-1 text-(--color-text-secondary)">
@@ -200,7 +137,7 @@ const Hotels = () => {
               ))}
             </div>
           </div>
-          <div className=" col-span-12 lg:col-span-5 rounded-2xl my-3 px-5 py-3 shadow-(--shadow-card) bg-(--color-bg-section) border  border-(--color-border) h-[500px]">
+          <div className={` ${openFilters?"h-[500px]":"h-auto" } col-span-12 lg:col-span-5 rounded-2xl my-3 px-5 py-3 shadow-(--shadow-card) bg-(--color-bg-section) border  border-(--color-border) `}>
             <div className="header flex justify-between border-b pb-2 border-b-gray-300">
               <p className="uppercase font-medium">filters</p>
               <div className="text-xs cursor-pointer">
