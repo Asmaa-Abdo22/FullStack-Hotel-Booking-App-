@@ -2,6 +2,7 @@ import homeImg from "../../assets/heroImage.png";
 import ExclusiveOffers from "../../Components/ExclusiveOffers/ExclusiveOffers";
 import FeaturedDestination from "../../Components/FeaturedDestination/FeaturedDestination";
 import Form from "../../Components/Form/Form";
+import HotelRegestration from "../../Components/HotelRegestration/HotelRegestration";
 import Newsletter from "../../Components/Newsletter/Newsletter";
 import Testimonials from "../../Components/Testimonials/Testimonials";
 
@@ -28,7 +29,7 @@ const Home = () => {
         </p>
         <Form />
       </div>
-
+      {/* <HotelRegestration /> */}
       <FeaturedDestination />
 
       <ExclusiveOffers />

@@ -6,6 +6,10 @@ import Experience from "./Pages/Experience/Experience";
 import About from "./Pages/About/About";
 import RoomDetails from "./Pages/RoomDetails/RoomDetails";
 import MyBookings from "./Pages/MyBookings/MyBookings";
+import LayOutt from "./Pages/HotelOwner/LayOutt";
+import Dashboard from "./Pages/HotelOwner/Dashboard";
+import AddRoom from "./Pages/HotelOwner/AddRoom";
+import ListRoom from "./Pages/HotelOwner/ListRoom";
 
 function App() {
   const routes = createBrowserRouter([
@@ -21,6 +25,11 @@ function App() {
         { path: "my-bookings", element: <MyBookings /> },
       ],
     },
+    {path:"/owner" ,element:<LayOutt/>,children:[
+      {index:true, element:<Dashboard/>},
+      {path:"addRoom", element:<AddRoom/>},
+      {path:"listRoom", element:<ListRoom/>},
+    ]}
   ]);
   return (
     <>
