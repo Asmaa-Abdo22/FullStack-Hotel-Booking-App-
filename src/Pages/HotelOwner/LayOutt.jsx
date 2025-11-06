@@ -8,7 +8,7 @@ const LayOutt = () => {
   return (
     <>
       <Nav />
-      <div className="flex  mt-20 min-h-screen">
+      <div className="flex  mt-25 min-h-screen">
         <div
           className={`w-15 md:w-50  sticky top-20 h-[calc(100vh-5rem)] border-r-2 border-(--color-border)`}
         >
@@ -16,7 +16,7 @@ const LayOutt = () => {
            
           />
         </div>
-        <div className="  grow pl-4">
+        <div className="  grow  px-3 mx-auto md:px-10 mb-4">
           <Outlet />
         </div>
       </div>
