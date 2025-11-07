@@ -21,7 +21,7 @@ const AddRoom = () => {
   });
 
   return (
-    <div className="addRoom  px-2 rounded-xl shadow-md max-w-3xl ">
+    <div className="addRoom   rounded-xl  max-w-3xl ">
       {/* ===== Title ===== */}
       <div className="title  mb-8">
         <h1 className="font-extrabold mb-3 text-3xl md:text-4xl text-(--color-text-main)">
@@ -109,28 +109,28 @@ const AddRoom = () => {
       <div className="Amenities mb-8">
         <p className="font-semibold text-lg mb-3">Amenities</p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {Object.keys(inputs.amenities).map((amenity, index) => (
+          {Object.keys(inputs.amenities).map((item, index) => (
             <label
               key={index}
               htmlFor={`amenities${index + 1}`}
-              className="flex items-center gap-2 bg-(--color-bg-card) border border-(--color-border) rounded-md py-2 px-3 hover:border-(--color-primary-dark) transition"
+              className="flex items-center gap-2 bg-(--color-bg-card) border border-(--color-border) rounded-md py-2 px-3 hover:border-(--color-primary-light) transition"
             >
               <input
                 type="checkbox"
                 id={`amenities${index + 1}`}
-                checked={inputs.amenities[amenity]}
+                checked={inputs.amenities[item]}
                 onChange={() =>
                   setInputs({
                     ...inputs,
                     amenities: {
                       ...inputs.amenities,
-                      [amenity]: !inputs.amenities[amenity],
+                      [item]: !inputs.amenities[item],
                     },
                   })
                 }
               />
               <span className="text-(--color-text-secondary) text-sm">
-                {amenity}
+                {item}
               </span>
             </label>
           ))}
@@ -138,7 +138,7 @@ const AddRoom = () => {
       </div>
 
       {/* ===== Submit Button ===== */}
-      <button className="w-full py-2 rounded-lg bg-(--color-primary-dark) hover:bg-(--color-primary) text-(--color-text-whitee) font-semibold transition">
+      <button className="w-full py-2 rounded-lg bg-(--color-primary-dark) hover:bg-(--color-primary) text-(--color-text-whitee) font-semibold transition cursor-pointer">
         Add Room
       </button>
     </div>
